@@ -1,0 +1,32 @@
+.createAttendeeModal {
+    background: rgba(0, 0, 0, 0.253);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .attendeeModalContainer {
+        width: 400px;
+        height: auto;
+        background: white;
+        border-radius: 5px;
+        padding: 1rem;
+
+        .attendeeModalHeader {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .attendeeField {
+            font-size: 1rem;
+            padding: .25rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+    }
+}

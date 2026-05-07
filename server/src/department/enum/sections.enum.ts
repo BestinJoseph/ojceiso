@@ -1,0 +1,13 @@
+export enum Sections {
+    NEWJOINEE="NEWJOINEE",
+    SOIL="SOIL",
+    AGGGREGATE="AGGREGATE",
+    CONCRETE="CONCRETE",
+    ASPHALT="ASPHALT",
+    ACCOUNTS="ACCOUNTS",
+    PROCUREMENT="PROCUREMENT",
+    HR="HR",
+    ISO="ISO",
+    HSE="HSE",
+    EMPTY=""
+}

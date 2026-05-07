@@ -1,0 +1,29 @@
+.ncr {
+    display: grid;
+    grid-template-columns: .1fr .55fr .15fr .25fr 1fr .25fr .3fr .25fr;
+    border-bottom: 1px solid wheat;
+    cursor: pointer;
+    padding: .75rem 0rem;
+
+    .ncrCellItem {
+        padding: 5px 10px;
+    }
+
+    &:hover {
+        background: whitesmoke;
+    }
+
+    .ncrViewBtn {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: blueviolet;
+        color: white;
+
+        &:hover {
+            background: white;
+            color: salmon;
+        }
+    }
+}

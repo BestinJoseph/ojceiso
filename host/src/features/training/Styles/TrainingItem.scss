@@ -1,0 +1,49 @@
+.trainingItem {
+
+    .trainingItemContainer {
+        display: grid;
+        grid-template-columns: .1fr 1fr .2fr .3fr .3fr .2fr .15fr;
+        border-bottom: 1px solid wheat;
+        padding: .75rem 0;
+
+        .trainingItemText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            
+            &:last-child {
+                background: blueviolet;
+            }
+        }
+
+        .trainingItemTextNoFlex {
+            padding: 5px 10px;
+        }
+
+        .trainingItemTextNoLeftBorder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+        }
+
+        .trainingViewBtn {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: blueviolet;
+            color: white;
+
+            &:hover {
+                background: white;
+                color: salmon;
+            }
+        }
+
+        &:hover {
+            background: rgb(250, 250, 250);
+        }
+    }
+}

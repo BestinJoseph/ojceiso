@@ -1,0 +1,22 @@
+.request {
+    margin-bottom: .25rem;
+    padding: 1rem;
+    background: #fafafa;
+    border-radius: 5px;
+
+    .requestItem {
+        display: grid;
+        grid-template-columns: .2fr 1fr 1fr 1fr .2fr;
+
+        .requestOneBtn {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 1.05rem;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}

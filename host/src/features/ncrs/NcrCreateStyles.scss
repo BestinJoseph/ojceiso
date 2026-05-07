@@ -1,0 +1,56 @@
+.ncrCreate {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .ncrCreateHeader {
+        padding-top: 2rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .formField {
+        display: inline-block;
+        width: 100%;
+        height: 2rem;
+        font-size: 1.05rem;
+        padding: 5px 12px;
+        margin-bottom: 1rem;
+    }
+
+    .formFieldTextArea {
+        display: block;
+        min-height: 3rem;
+        font-size: 1.05rem;
+        padding: 5px 12px;
+        width: 100%;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        resize: horizontal;
+    }
+
+    .formFieldSelect {
+        display: block;
+        width: 100%;
+        min-height: 2rem;
+        font-size: 1.05rem;
+        padding: 5px 12px;
+        margin-bottom: 1rem;
+    }
+
+    .formFieldLabel {
+        display: block;
+        padding-bottom: .5rem;
+    }
+
+    .submitBtn {
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .previewContainer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: .5rem;
+        row-gap: .5rem;
+    }
+}

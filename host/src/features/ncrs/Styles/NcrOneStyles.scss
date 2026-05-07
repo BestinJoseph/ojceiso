@@ -1,0 +1,173 @@
+.ncrOne {
+    padding: 1rem 1rem .5rem 0;
+    position: relative;
+    max-width: 800px;
+    width: 800px;
+
+    .ncrConatiner {
+        max-width: 800px;
+        width: 800px;
+        border: 1px black solid;
+        margin: 0rem 0 1rem;
+        font-size: .95rem;
+
+        .ncrRefandDateSection {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .ncrRefSection {
+                border: 1px black solid;
+                display: grid;
+                grid-template-columns: .30fr 1fr;
+                padding: .25rem;
+            }
+
+            .ncrDateSection {
+                border: 1px black solid;
+                display: grid;
+                grid-template-columns: .30fr 1fr;
+                padding: .25rem;
+            }
+
+            .ncrSignCorrection {
+                border: 1px black solid;
+                display: grid;
+                grid-template-columns: .40fr 1fr;
+                padding: .25rem;
+            }
+
+            .ncrSignImplemented {
+                border: 1px black solid;
+                display: grid;
+                grid-template-columns: .55fr 1fr;
+                padding: .25rem;
+            }
+
+            .ncrTypeSection {
+                border: 1px black solid;
+                display: grid;
+                grid-template-columns: .30fr 1fr;
+                padding: .25rem;
+            }
+
+            .ncrReqRefSection {
+                border: 1px black solid;
+                display: grid;
+                grid-template-columns: .30fr 1fr;
+                padding: .25rem;
+            }
+
+            .ncrSignificanceSection {
+                border: 1px black solid;
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: .25rem;
+            }
+
+            .ncrSignatureandRaisedAtSection {
+                border: 1px black solid;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: .25rem;
+
+                .ncrSignRaised {
+                    display: grid;
+                    grid-template-columns: .30fr 1fr;
+                }
+
+                .ncrTargetDate {
+                    display: grid;
+                    grid-template-columns: .85fr 1fr;
+                }
+            }
+            
+            .ncrCorrectionVerficationSection {
+                border: 1px black solid;
+                display: grid;
+                grid-template-columns: 1fr .25fr;
+                padding: .25rem;
+            }
+        }
+
+        .ncrCorrectionVerficationSection {
+            border: 1px black solid;
+            display: grid;
+            grid-template-columns: 1fr .33fr;
+            padding: .25rem;
+
+            .ncrVerifiedBy {
+                display: grid;
+                grid-template-columns: 1fr .5fr;
+            }
+
+            .ncrVerifiedDate {
+                display: grid;
+                grid-template-columns: .85fr 1fr;
+            }
+        }
+
+        .ncrSupportAndCloseOutSection {
+            border: 1px black solid;
+            display: grid;
+            grid-template-columns: 1fr .8fr;
+            padding: .25rem;
+
+            .ncrVerifiedBy {
+                display: grid;
+                grid-template-columns: 1fr .5fr;
+            }
+
+            .ncrVerifiedDate {
+                display: grid;
+                grid-template-columns: .85fr 1fr;
+            }
+        }
+
+        .ncrDetailsContainer {
+            border: 1px black solid;
+
+            .ncrDetailsContentSection {
+                height: 105px;
+                padding: .25rem;
+
+                p {
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+
+    .PrintandUpdateSection {
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        left: 1050px;
+        top: 80px;
+
+        .printAndUpdateContainer {
+            padding: 1rem;
+            border: 1px gray solid;
+            border-radius: 5px;
+            width: 300px;
+
+            .targetDateConatiner {
+                margin-bottom: 1rem;
+            }
+
+            .printAndActionBtns {
+                text-align: center;
+                width: 100%;
+
+                .printBtn {
+                    padding: 1rem 1.25rem;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    display: block;
+                    margin-bottom: 1rem;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+        }
+    }
+}

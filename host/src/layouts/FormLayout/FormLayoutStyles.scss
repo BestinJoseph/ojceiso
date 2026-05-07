@@ -1,0 +1,43 @@
+.formLayout {
+
+    .ncrOnePrintHeader {
+        max-width: 800px;
+        width: 800px;
+        display: grid;
+        grid-template-columns: .30fr 1fr;
+
+        .ncrOnePrintHeaderContent {
+            text-align: center;
+            display: grid;
+            align-items: center;
+        }
+    }
+
+    .ncrOnePrintFooter {
+        max-width: 800px;
+        width: 800px;
+
+        .noteText {
+            font-size: .8rem;
+        }
+
+        .footerForReference {
+            display: grid;
+            grid-template-columns: 1fr .31fr .55fr .82fr .3fr;
+            align-items: center;
+            border: .05px black solid;
+
+            .formReferenceItem {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: .05px black solid;
+                padding: .25rem 0;
+
+                p, h5 {
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+}

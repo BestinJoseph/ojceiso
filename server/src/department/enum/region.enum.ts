@@ -1,0 +1,8 @@
+export enum Region {
+    RIYADH="RIYADH",
+    MADINAH="MADINAH",
+    JEDDAH="JEDDAH",
+    JUBAIL="JUBAIL",
+    QASSIM="QASSIM",
+    MGMT="MANAGEMENT"
+}

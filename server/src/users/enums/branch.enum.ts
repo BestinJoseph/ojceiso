@@ -1,0 +1,8 @@
+export enum Branch {
+    HEADOFFICE= "HEAD OFFICE",
+    RIYADH= "RIYADH",
+    MADINAH= "MADINAN",
+    JEDDAH= "JEDDAH",
+    JUBAIL= "JUBAIL",
+    QASSIM= "QASSIM"
+}

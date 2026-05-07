@@ -1,0 +1,12 @@
+export enum Department {
+    MANAGEMENT= 'MANAGEMENT',
+    GEOTECNICAL= 'GEOTECHNICAL',
+    MATERIAL= 'MATERIAL',
+    SURVEY= 'SURVEY',
+    CHEMICAL= 'CHEMICAL',
+    CALIBRATTION= 'CALIBRATION',
+    TRADING= 'TRADING',
+    HR= 'HR',
+    ISO= 'ISO',
+    IT='IT',
+}

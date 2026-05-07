@@ -1,0 +1,5 @@
+export enum Status {
+    REQUESTED="REQUESTED",
+    REVIEWED="REVIEWED",
+    APPROVED="APPROVED"
+}

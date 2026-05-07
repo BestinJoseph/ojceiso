@@ -1,0 +1,44 @@
+.certificateOne {
+    padding-left: 1rem;
+    position: relative;
+
+    .certificateOneContainer {
+
+        .certificateItemsList {
+            list-style: none;
+
+            .certificateItem {
+                margin-bottom: .5rem;
+                display: flex;
+
+                .certificateItemValue {
+                    margin-left: .5rem;
+                }
+            }
+        }
+
+        .certificateDocument {
+            margin-top: 2rem;
+
+            .certificateDocContainer {
+                max-width: 500px;
+            }
+        }
+
+        .certificateExpiredDocument {
+            margin-top: 2rem;
+            width: 1150px;
+
+            .expiredDocSection {
+                border: 1px solid red;
+                display: flex;
+
+                .certificateExpiredDocContainer {
+                    max-width: 300px;
+                    height: 200px;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

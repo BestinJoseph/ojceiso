@@ -1,0 +1,155 @@
+.uExperience {
+    margin: 1.5rem 1rem;
+
+    .uExperienceContainer {
+
+        .uExperienceItem {
+            border: 1px solid wheat;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: .5rem;
+            list-style: none;
+
+            .employerListItem {
+                padding: 1rem 1rem 1rem 0;
+                border-bottom: 1px solid wheat;
+                margin-left: 1rem;
+                position: relative;
+
+                .employerListItemCompanyProps {
+                    display: flex;
+                    align-items: center;
+                    margin-top: .25rem;
+                    height: 1rem;
+
+                    p {
+                        font-size: .9rem;
+                        margin: 0 .35rem 0 0;
+
+                        .experiensStyle {
+                            background: #c1121f;
+                            color: white;
+                            padding: .15rem .25rem;
+                            border-radius: 2px;
+                            margin-left: .1rem;
+                        }
+
+                        &:first-child {
+                            margin-left: 0rem;
+                        }
+
+                        &::after {
+                            content: "-";
+                            width: 3px;
+                            height: 3px;
+                            margin-left: .35rem;
+                        }
+
+                        &:last-child {
+
+                            &::after {
+                                content: "";
+                                width: 0px;
+                                height: 0px;
+                                margin-left: 0rem;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0rem;
+                }
+
+                .updateExperience {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+
+                    .iconsStyles {
+                        cursor: pointer;
+                        
+                        &:hover {
+                            color: #780000;
+                        }
+                    }
+
+                    button {
+                        background: none;
+                        border: none;
+                        padding: 0;
+
+                        .iconSaveStyles {
+                            cursor: pointer;
+                            margin-right: .5rem;
+
+                            &:hover {
+                                color: green;
+                            }
+                        }
+                    }
+
+                    .iconsAddStyles {
+                        cursor: pointer;
+                        margin-left: .5rem;
+
+                        &:hover {
+                            color: green;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                background: #fefcf7;
+            }
+        }
+    }
+
+    .expAddFormContainer {
+
+        .expAddFormItem {
+            margin-bottom: 1rem;
+
+            p {
+                font-size: .8rem;
+            }
+
+            .expFormItemField {
+                min-width: 50vh;
+                font-size: 1rem;
+                padding: .25rem .5rem;
+                margin-top: .25rem;
+            }
+
+            .expFormDurItem {
+
+                .expFormItemField {
+                    margin-right: 1rem;
+                    min-width: 15vh;
+                    max-width: 15vh;
+
+                    &:last-child {
+                        margin-right: 0rem;
+                    }
+                }
+            }
+        }
+
+        .expBtn {
+            background: #c1121f;
+            font-size: 1rem;
+            padding: .5rem;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+
+            &:hover {
+                background: #780000;
+            }
+        }
+    }
+}

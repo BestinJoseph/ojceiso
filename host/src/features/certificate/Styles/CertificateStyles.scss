@@ -1,0 +1,49 @@
+.certificateItem {
+
+    .certificateItemContainer {
+        display: grid;
+        grid-template-columns: .1fr 1fr .3fr .3fr .3fr .15fr;
+        border-bottom: 1px solid wheat;
+        padding: .75rem 0;
+
+        .certificateItemText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            
+            &:last-child {
+                background: blueviolet;
+            }
+        }
+
+        .certificateItemTextNoFlex {
+            padding: 5px 10px;
+        }
+
+        .certificateItemTextNoLeftBorder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+        }
+
+        .certificateViewBtn {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: blueviolet;
+            color: white;
+
+            &:hover {
+                background: white;
+                color: salmon;
+            }
+        }
+
+        &:hover {
+            background: rgb(250, 250, 250);
+        }
+    }
+}

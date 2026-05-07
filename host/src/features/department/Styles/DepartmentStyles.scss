@@ -1,0 +1,29 @@
+.depContainer {
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    padding: 1rem;
+    min-height: 15rem;
+    cursor: pointer;
+    box-shadow: 0 0 1px #fafafa;
+    position: relative;
+
+    .depName {
+        text-transform: capitalize;
+        margin-bottom: .5rem;
+    }
+
+    .depFindMore {
+        display: block;
+        cursor: pointer;
+        width: 85%;
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        font-size: 1.1rem;
+        
+    }
+
+    &:hover {
+        border: 1px solid red;
+    }
+}

@@ -1,0 +1,61 @@
+.ncrUpdate {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .ncrUpdateHeader {
+        padding-top: 2rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .formField {
+        display: inline-block;
+        width: 100%;
+        height: 3rem;
+        font-size: 1.05rem;
+        padding: 5px 12px;
+        margin-bottom: 1rem;
+    }
+
+    .formFieldCheckBox {
+        display: flex;
+        margin-bottom: 1rem;
+        align-items: center;
+        
+        .formCheckBox {
+            height: 25px;
+            margin-right: .5rem;
+        }
+    }
+
+    .formFieldTextArea {
+        display: block;
+        min-height: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.05rem;
+        padding: 10px 12px;
+        width: 100%;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        resize: horizontal;
+    }
+
+    .formFieldSelect {
+        display: block;
+        width: 600px !important;
+        min-height: 3rem;
+        font-size: 1.05rem;
+        padding: 10px 12px;
+        margin-bottom: 1rem;
+    }
+
+    .formFieldLabel {
+        display: block;
+        padding-bottom: .5rem;
+    }
+
+    .submitBtn {
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+}

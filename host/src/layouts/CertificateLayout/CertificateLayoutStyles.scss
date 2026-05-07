@@ -1,0 +1,37 @@
+.certificateLayout {
+    margin-top: 3.25rem;
+
+    .certificateContainers {
+        position: relative;
+        margin: 0 auto;
+
+        .certificateMenu {
+            position: fixed;
+            width: 12rem;
+            height: 85vh;
+            border-right: 1px solid gray;
+
+            h4 {
+                margin: 1rem 0;
+                padding-left: 1rem;
+                text-transform: uppercase;
+            }
+
+            .certificateMenuItems {
+                list-style: none;
+                margin-top: 2rem;
+
+                .menuItem {
+                    padding: .5rem 0 .5rem 1rem;
+                    cursor: pointer;
+                    border-bottom: 1px solid gray;
+                }
+            }
+        }
+
+        .certificateContentContainer {
+            margin-left: 12rem;
+            padding: 2rem 1rem 0 1rem;
+        }
+    }
+}

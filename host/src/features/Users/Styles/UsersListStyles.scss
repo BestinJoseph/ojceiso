@@ -1,0 +1,20 @@
+.usersList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    column-gap: 1rem;
+    padding-bottom: 3rem;
+
+    .usersListContainer {
+        max-height: 70vh;
+        height: 70vh;
+        overflow-y: scroll;
+        scrollbar-width: 0;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+            background-color: #F5F5F5;
+            border-radius: 10px;
+        } 
+    }
+}

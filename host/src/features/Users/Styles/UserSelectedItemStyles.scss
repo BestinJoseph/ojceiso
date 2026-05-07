@@ -1,0 +1,214 @@
+.user {
+    max-height: 85vh;
+    
+    .userContainer {
+        margin-bottom: 0rem;
+        background: wheat;
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .selectUserFormContainer {
+        display: flex;
+    }
+
+    .selectUserDetails {
+        margin-top: 1rem;
+
+        .tabContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #c1121f;
+
+            .userDetailTabs {
+                list-style: none;
+                display: flex;
+                margin: 0 .5rem 0rem 0;
+
+                .deTabsItem {
+                    margin-right: .5rem;
+                    cursor: pointer;
+                    background: wheat;
+                    padding: .5rem .75rem;
+                }
+
+                & .active {
+                    color: white;
+                    background: #c1121f;
+                }
+            }
+
+            .createTab {
+                cursor: pointer;
+
+                .createIcon {
+                    font-size: 1.5rem;
+
+                    &:hover {
+                        color: red
+                    }
+                }
+            }
+        }
+
+        .detailsContentSection {
+            margin-top: 1rem;
+        }
+
+        .professContainer {
+            padding: 1.5rem 1rem 1rem 1rem;
+            margin: 0 0rem 1rem 0;
+            border: 1px solid black;
+            border-radius: 5px;
+            position: relative;
+
+            .profDataContainer {
+
+                .profDataSubContainer {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-bottom: .75rem;
+                    height: 1rem;
+
+                    .profDataValue {
+                        margin: 0 0 -2px .5rem;
+                    }
+
+                    .profDataInput {
+                        margin-left: .5rem;
+                        font-size: .95rem;
+                        padding: 0 .25rem;
+                    }
+
+                    .btnPDSC {
+                        margin-left: .5rem;
+                        cursor: pointer;
+
+                        .btnPDSCSvg {
+                            width: 1.2rem;
+                            height: 1rem;
+                        }
+
+                        &:hover {
+                            .btnPDSCSvg {
+                                color: #c1121f;
+                            }
+                        }
+                    }
+
+                    .btnPDU {
+                        border: none;
+                        background: none;
+                        padding: 0;
+                        margin: 0 .5rem;
+                        cursor: pointer;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0rem;
+                    }
+                }
+            }
+
+            .titleContainer {
+                position: absolute;
+                left: 8px;
+                top: -.55rem;
+                z-index: 1;
+                padding: 0 .5rem;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0px;
+                    top: 0rem;
+                    z-index: -1;
+                    background: white;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .btnPC {
+                position: absolute;
+                bottom: -1rem;
+                right: 1rem;
+                z-index: 1;
+                padding: 0 .5rem;
+                cursor: pointer;
+
+                .btnPCContainer {
+                    border: none;
+                    padding: 0;
+                    background: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #c1121f;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0px;
+                    top: 0rem;
+                    z-index: -1;
+                    background: white;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:hover {
+                    color: #c1121f;
+                }
+            }
+        }
+
+        .userPersonalSection {
+
+            .personalItems {
+                display: flex;
+                align-items: flex-end;
+                margin-bottom: .75rem;
+
+                .presonalItemsContent {
+                    margin-left: 1rem;
+                    height: 20px;
+                    display: inline;
+                }
+
+                .personalField {
+                    margin-left: 1rem;
+                }
+
+                .personalFieldCancelBtn {
+                    margin-left: .5rem;
+                    cursor: pointer;
+                    color: red;
+                    font-size: .95rem;
+
+                    &:hover {
+                        color: blue;
+                    }
+                }
+
+                .personalFieldUpdateBtn {
+                    margin-left: .5rem;
+                    cursor: pointer;
+                    color: blue;
+                    background: none;
+                    border: none;
+                    font-size: .95rem;
+
+                    &:hover {
+                        color: palevioletred;
+                    }
+                }
+            }
+        }
+    }
+}

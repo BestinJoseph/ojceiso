@@ -1,0 +1,10 @@
+/.vscode
+
+/host/.env
+/host/node_modules
+/host/dist
+
+/server/.env
+/server/dist
+/server/node_modules
+

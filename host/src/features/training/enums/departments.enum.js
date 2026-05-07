@@ -1,0 +1,7 @@
+export const Deparments = Object.freeze({
+    MATERIAL: 'MATERIAL',
+    CHEMICAL: 'CHEMICAL',
+    SURVEY: 'SURVEY',
+    CALIBRATION: 'CALIBRATION',
+    GEOTECHNICAL: 'GEOTECHNICAL'
+})

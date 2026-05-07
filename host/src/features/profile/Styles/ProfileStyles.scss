@@ -1,0 +1,249 @@
+.profile {
+    max-width: 1200px;
+    margin: 0rem auto;
+
+    .profileNameSection {
+        margin: 0rem 0 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 5rem;
+
+        .profilePrintBtn {
+            cursor: pointer;
+            border: none;
+            padding: .75rem 1.25rem;
+            color: blueviolet;
+            font-size: 1rem;
+            font-weight: 600;
+
+            &:hover {
+                background: blueviolet;
+                color: white;
+            }
+        }
+    }
+
+    .profileHeaderContainer {
+        display: grid;
+        grid-template-columns: .25fr 1fr;
+        column-gap: 2rem;
+        padding: 2rem 2rem;
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px #888888;
+        position: relative;
+
+        .profileDP {
+            max-width: 220px;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+
+            .profileImage {
+                width: 100%;
+            }
+
+            .dpUploadContainer {
+                position: absolute;
+                bottom: 7.5px;
+                left: 5px;
+                display: none;
+                z-index: 1;
+
+                .inputDPImage {
+                    cursor: pointer;
+
+                    &::file-selector-button {
+                        cursor: pointer;
+
+                    }
+                }
+            }
+
+            .dpUploadContainerSave {
+                position: absolute;
+                bottom: 7.5px;
+                left: 5px;
+                z-index: 1;
+                cursor: pointer;
+            }
+
+            &:hover {
+
+                .dpUploadContainer {
+                    display: block;
+                }
+            }
+        }
+
+        .editBtnHeader {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            cursor: pointer;
+
+        }
+
+        .personalInfoContainer {
+
+            .detailContainer {
+                margin-bottom: .35rem;
+
+                p { font-size: .8rem; }
+                h3 { font-size: 1.1rem; }
+
+                .editDetailsField {
+                    font-size: .95rem;
+                }
+            }
+        }
+    }
+
+    .profileContentConatiner {
+        margin-top: 1rem;
+        border-bottom: 1px gray solid;
+
+        .profileLinks {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            
+            .profileLinksItem {
+                margin-right: 1rem;
+                background: blueviolet;
+                cursor: pointer;
+                padding: .5rem .75rem;
+
+                &:hover {
+                    background: whitesmoke;
+                }
+            }
+
+            .active {
+                background: whitesmoke;
+            }
+        }
+
+    }
+
+    .profilePersonalContainer {
+        margin-top: 1rem;
+
+        .personalFormContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .personalValueContainer {
+
+                .valueItems {
+                    display: flex;
+
+                    .valueItemBtn {
+                        color: blueviolet;
+                        font-size: .75rem;
+                        cursor: pointer;
+                        display: none;
+                    }
+
+                    &:hover {
+
+                        .valueItemBtn {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .profileEmployementContainer {
+        margin-top: 1rem;
+
+        .positionItem {
+            padding: .75rem .5rem .5rem .5rem;
+            border: 1px solid yellowgreen;
+            border-radius: .25rem;
+
+            .positionItem--sub {
+                margin-top: .5rem;
+                padding: .25rem;
+                
+                h4 {
+                    margin-bottom: .25rem;
+                    padding-left: 1rem;
+                }
+
+                .positionItem--sub__innerContainer {
+                    display: flex;
+                    margin-left: 1rem;
+
+                    p {
+                        margin-right: .5rem;
+
+                        &::after {
+                            content: "-";
+                            margin-left: .5rem;
+                        }
+
+                        &:last-child {
+                            margin-left: 0rem;
+
+                            &::after {
+                                content: "";
+                                margin-left: 0rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .profileEducationContainer {
+        margin-top: 1rem;
+
+        .educationContentContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: 1rem;
+        }
+
+        .educationCreateSection {
+            margin-bottom: 1rem;
+            max-width: 30rem;
+            border: 1px blueviolet solid;
+            border-radius: 5px;
+            padding: .5rem;
+            
+            .createForm {
+
+                .formHeader {
+                    margin-bottom: .5rem;
+                }
+
+                .formField {
+                    font-size: 1rem;
+                    padding: .35rem;
+                    width: 100%;
+                    margin-bottom: .5rem;
+                }
+
+                .submitBtn {
+                    padding: .35rem .5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .createSetBtnContainer {
+            background: seagreen;
+            display: inline-block;
+            padding: .75rem;
+            cursor: pointer;
+
+            &:hover {
+                background: blueviolet;
+            }
+        }
+    }
+}

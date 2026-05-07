@@ -1,0 +1,23 @@
+.ncrslist {
+    margin: 0 auto;
+
+    .ncrslistHeaderBar {
+        display: grid;
+        grid-template-columns: .1fr .55fr .15fr .25fr 1fr .25fr .3fr .15fr;
+        font-weight: 700;
+        background: blueviolet;
+        margin-bottom: .2rem;
+
+        .ncrHeaderCell {
+            color: white;
+            padding: .5rem 0;
+        }
+
+        .ncrHeaderCellDetails {
+            color: white;
+            padding: 0 0 0 0rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

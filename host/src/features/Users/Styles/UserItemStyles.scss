@@ -1,0 +1,19 @@
+.userOneContainer {
+    list-style: none;
+    border-right: 1px solid gray;
+
+    .listItem {
+        cursor: pointer;
+        padding: .5rem 0 .5rem 1rem;
+        
+        &:hover {
+            background: #d80032;
+            color: white;
+        }
+    }
+
+    .active {
+        background: #c1121f;
+        color: white;
+    }
+}

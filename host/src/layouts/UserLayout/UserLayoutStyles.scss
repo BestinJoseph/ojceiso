@@ -1,0 +1,40 @@
+.userLayout {
+    padding-top: 3.5rem;
+    
+    .userContainer {
+        display: flex;
+
+        .usersMenu {
+            position: fixed;
+            width: 12rem;
+            min-height: 100vh;
+            border-right: 1px solid gray;
+            background: wheat;
+
+            h4 {
+                margin: 1rem 0;
+                padding-left: 1rem;
+                text-transform: uppercase;
+            }
+
+            .usersMenuItems {
+                list-style: none;
+                margin-top: 2rem;
+
+                .menuItem {
+                    padding: .5rem 0 .5rem 1rem;
+                    cursor: pointer;
+                    border-bottom: 1px solid gray;
+                }
+            }
+
+        }
+
+        .usersContentContainer {
+            margin-left: 12rem;
+            padding: 2rem 1rem 0 0rem;
+            width: 100%;
+            max-height: 85vh ;
+        }
+    }
+}
