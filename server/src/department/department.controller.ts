@@ -32,7 +32,11 @@ export class DepartmentController {
             const slug = createDepartmentDto.name.split(' ').reduce( (obj, acc, key) => { obj += "_" + acc; return obj}, " " )
             return await this.departmentService.create({ ...createDepartmentDto, slug: slug.trim(), createdBy: req.user }); 
         } catch (err) {
-            return { success: false, message: err.message }
+            if (err instanceof Error) {
+                return { success: false, message: err.message }
+            } else {
+                return { success: false, message: "something went wrong." }
+            }
         }
     }
 

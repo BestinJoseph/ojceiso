@@ -29,7 +29,7 @@ export class UsersService {
             const { ...hPUser } = { ...createUserDto, password: hashPassword }
             return await this.userRepository.save(hPUser)
         } catch (err) {
-            return { success: false, message: err.message }
+            return { success: false, message: "Something went wrong." }
         }
     }
 
@@ -57,7 +57,7 @@ export class UsersService {
         try {
             return await this.userRepository.update( { username: username }, updateRefreshToken )
         } catch (err) {
-            return { error: err.message }
+            return { error: "Something went wrong." }
         }
     }
 
@@ -75,7 +75,7 @@ export class UsersService {
                 await this.userRepository.update({ username: user.username}, updateUserRole)
             }
         } catch (error) {
-            return { status: 401, error: error.message }
+            return { status: 401, error: "Something went wrong." }
         }
     }
 
@@ -100,7 +100,7 @@ export class UsersService {
                 return { status: 200, message: "updated", success: true, error: false }
             }
         } catch (err) {
-            return { error: err.message }
+            return { error: "Something went wrong." }
         }
     }
 

@@ -14,7 +14,11 @@ export class DepartmentService {
         try {
             return await this.departmentRepository.save(createDepartmentDto);
         } catch (err) {
-            return { success: false, message: err.message }
+            if (err instanceof Error) {
+                return { success: false, message: err.message }
+            } else {
+                return { success: false, message: "something went wrong." }
+            }
         }
     }
 

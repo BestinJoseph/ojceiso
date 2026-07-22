@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import * as cookieParse from 'cookie-parser'
+import cookieParse from 'cookie-parser'
 import { AppModule } from './app.module';
 
 console.log(process.env.FRONT_END_URL)

@@ -13,7 +13,7 @@ export class RequestService {
 		try {
 			return await this.requestRepository.save(createRequestDto)
 		} catch (err) {
-			return { success: false, message: err.message }
+			return { success: false, message: "some error" }
 		}
 	}
 
@@ -21,7 +21,7 @@ export class RequestService {
 		try {
 			return await this.requestRepository.find({ relations: { requestedTo: true, }, select: { requestedTo: { name: true, symbol: true, id: true }} })
 		} catch (err) {
-			return { success: false, message: err.message }
+			return { success: false, message: "some error" }
 		}
 	}
 

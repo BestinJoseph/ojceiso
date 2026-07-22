@@ -38,7 +38,7 @@ export class UsersController {
             const createUser = { ...createUserDto, profile }
             return await this.userServices.create(createUser)
         } catch (err) {
-            return err.response
+            return err
         }
     } 
 

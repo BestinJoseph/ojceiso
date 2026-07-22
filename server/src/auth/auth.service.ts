@@ -34,7 +34,15 @@ export class AuthService {
             const reRefreshToken = await this.usersService.updateRefreshToken(user.username, { refreshToken })
             return { user, access_token: accessToken, refreshToken };
         } catch (err) {
-            return { error: err.message }
+            try {
+                
+            } catch (error) {
+                if (error instanceof Error) {
+                    return { error: error.message }
+                } else {
+                    return { error: "there is a problem"}
+                }
+            }
         }
     }
 
@@ -47,7 +55,11 @@ export class AuthService {
             await this.usersService.updateRefreshToken(user.username, { refreshToken: null })
             return { access_token: null }
         } catch (err) {
-            return err?.message
+            if (err instanceof Error) {
+                    return { error: err.message }
+                } else {
+                    return { error: "there is a problem"}
+                }
         }
     }
 
