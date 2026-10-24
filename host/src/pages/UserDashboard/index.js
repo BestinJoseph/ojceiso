@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { selectAuth } from '../../features/authSliceOld'
 import { Link, Outlet, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useSendLogoutMutation } from '../../features/auth/authApiSlice'
+import { FaUserCircle } from "react-icons/fa"
 
 import './UserDashboardStyles.scss'
 import useAuth from '../../hooks/useAuth'
@@ -15,20 +16,34 @@ const UserDashboard = () => {
     const { isManager, isAdmin, isSuper, status, roles } = useAuth()
     const location = useLocation()
     const [pa, setPa] = useState('dashboard')
+    const [proOn, setProOn] = useState(false)
+    const modalRef = useRef(null)
 
     useEffect(()=>{
         if (isSuccess) navigate("/")
+
         if (location.pathname?.split('/')[2]) {
             setPa(location.pathname?.split('/')[2])
         } else [
             setPa('dashboard')
         ]
-    }, [isSuccess, location])
+
+        document.addEventListener('mousedown', handleOutsideClick)
+
+        return () => { document.removeEventListener('mousedown', handleOutsideClick)}
+
+    }, [isSuccess, location, proOn])
 
     const handleLogout = async () => {
         sendLogout()
         if(error) {
             console.log('Signed Out')
+        }
+    }
+
+    const handleOutsideClick = (e) => {
+        if(modalRef.current && !modalRef.current.contains(e.target)) {
+            setProOn(!proOn)
         }
     }
 
@@ -43,7 +58,6 @@ const UserDashboard = () => {
                 </div>
                 <div className='navContainer'>
                     <Link to="/employee" className={`navItem ${ pa === 'dashboard' ? 'active' : null}`}>Dashboard</Link>
-                    <Link to="/employee/profile" className={`navItem ${ pa === 'profile' ? 'active' : null}`}>Profile</Link>
                     { isSuper && <Link to="/employee/users" className={`navItem ${ pa === 'users' ? 'active' : null}`}>Users</Link> }
                     { <Link to="/employee/requests" className={`navItem ${ pa === 'requests' ? 'active' : null}`}>Requests</Link> }
                     {/* { <Link to="/employee/departments" className={`navItem ${ pa === 'departments' ? 'active' : null}`}>Departments</Link> } */}
@@ -54,7 +68,19 @@ const UserDashboard = () => {
                     <Link to="/employee/certificates" className='navItem'>Cerificates</Link> */}
                     {/* { isManager && <Link to="/employee/manager" className='navItem'>Manager</Link>}
                     { isAdmin && <Link to="/employee/manager" className='navItem'>Admin</Link>} */}
-                    <button onClick={ () => handleLogout() } className="logoutBtn">logout</button>
+                    <div className="useAccountContainer" style={{ }}>
+                        <div className="useIcon" style={{ }}><FaUserCircle onClick={() => setProOn(!proOn) } fontSize={'30'}/></div>
+                        { proOn === false ? <></> :
+                            <div className="userOptionContainer" ref={modalRef}>
+                                <div style={{ color: 'black', textAlign: 'left', padding: '1rem 0 1rem .65rem'}}>
+                                    <h5 style={{ marginBottom: '8px', }}>Bestin Joseph</h5>
+                                    <p>Quality Incharge - Mgmt</p>
+                                </div>
+                                <button onClick={() => { navigate('/employee/profile'), setProOn(!proOn)}} className={`navItemProfile ${ pa === 'profile' ? 'active' : null}`}>Profile</button>
+                                <button onClick={ () => handleLogout() } className="navItemProfile">logout</button>
+                            </div>
+                        }
+                    </div>
                 </div>
                 <div className='hamNavContainer'></div>
             </div>
