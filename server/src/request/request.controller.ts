@@ -36,8 +36,9 @@ export class RequestController {
 
 	@UseGuards(JwtAuthGuard)
 	@Get(':id')
-	findOne(@Param('id') id: string) {
-		return this.requestService.findOne(+id);
+	async findOne(@Param('id') id: any) {
+		// console.log(id)
+		return await this.requestService.findOne(id);
 	}
 
 	@UseGuards(JwtAuthGuard)

@@ -25,8 +25,8 @@ export class RequestService {
 		}
 	}
 
-	findOne(id: number) { 
-		return `This action returns a #${id} request`;
+	async findOne(id: any) {
+		return await this.requestRepository.findOneOrFail({ where: {id}});
 	}
 
 	update(id: number, updateRequestDto: UpdateRequestDto) {

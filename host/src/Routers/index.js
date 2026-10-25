@@ -29,6 +29,7 @@ import RequestCreate from '../features/request/RequestCreate'
 import RequestsList from '../features/request/RequestsList'
 import DepartmentHome from '../features/department/DepartmentHome'
 import DepartmentOne from '../features/department/DepartmentOne'
+import Requestfile from '../features/request/Requestfile'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -43,9 +44,10 @@ const router = createBrowserRouter(
                         <Route element={<UserDashboard />}>
                             <Route index element={<Dashboard />}/>
                             <Route path="requests" >
-                                <Route index element={<Request />} />
-                                {/* <Route path='lists' element={<RequestsList />} /> */}
+                                {/* <Route index element={<Request />} /> */}
+                                <Route index element={<RequestsList />} /> 
                                 <Route path='create' element={<RequestCreate />} />
+                                <Route path=':id' element={<Requestfile />} />
                             </Route>
                             <Route path="departments" >
                                 <Route index element={<DepartmentHome />} />

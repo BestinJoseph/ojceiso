@@ -55,7 +55,7 @@ export const requestApiSlice = apiSlice.injectEndpoints({
             }
         }),
         getRequest: builder.query({
-            query: () => ({
+            query: (id) => ({
                 url: `/requests/${id}`,
                 method: 'GET'
             }),
@@ -63,13 +63,13 @@ export const requestApiSlice = apiSlice.injectEndpoints({
                 return response.status === 200 && !result.isError
             },
             keepUnusedDataFor: 5,
-            transformResponse: (responseData) => {
-                const loadRequests = responseData?.map((resp) => {
-                    resp.id = resp.id
-                    return resp
-                })
-                return requestAdapter.setAll( initialState, loadRequests )
-            },
+            // transformResponse: (responseData) => {
+            //     const loadRequests = responseData?.map((resp) => {
+            //         resp.id = resp.id
+            //         return resp
+            //     })
+            //     return requestAdapter.setAll( initialState, loadRequests )
+            // },
             providesTags: (result, error, arg) => {
                 if(result?.ids) {
                     return [...result.ids.map(id => ({ type: 'Request', id})), { type: 'Request', id: 'LIST' }]
